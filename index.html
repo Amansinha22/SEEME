@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="ValentineHome.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="question">Sorry for this chapri cringe and nibba harkat... ?</h1>
+        <h2 class="question">Press Yes or No</h2>
+        <div class="button-container">
+            <button id="yesBtn" class="btn">Yes</button>
+            <button id="noBtn" class="btn">No</button>
+        </div>
+    </div>
+    <script>
+        document.getElementById("yesBtn").addEventListener("click", function() {
+            window.location.href = "Yes_Page.html";
+        });
+
+        document.getElementById("noBtn").addEventListener("click", function() {
+            window.location.href = "No_Page.html";
+        });
+    </script>
+</body>
+</html>

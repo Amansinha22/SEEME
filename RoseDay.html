@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Rose Day</title>
+    <link rel="stylesheet" href="RoseDay.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>💖 Dear Cheemi 💖</strong>
+                        <p>
+                            <img src="RoseDayPic.png" alt="RoseDay">
+                        </p>
+                    </div>
+                    <div class="container">
+                        <h1 class="question">तू वो चाँद है जिसका मैं तारा बनना चाहता हूँ, <br> 
+                            तू वो आसमान है जिसका मैं बादल बनना चाहता हूँ।  <br>
+                            तुझे फूलों की क्या ज़रूरत,  <br>
+                            तू वो गुलाब है जिसका मैं काँटा बनना चाहता हूँ। 🌹❤
+                            </h1>
+                        </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+envelope.addEventListener('click', () => {
+    envelope.classList.toggle('flap');
+    const letter = document.querySelector('.envelope > .letter');
+    // Toggle visibility of the letter based on the flap class
+    if (envelope.classList.contains('flap')) {
+        letter.style.visibility = 'visible';
+    } else {
+        letter.style.visibility = 'hidden';
+    }
+});
+function updateCountdown() {
+            const targetDate = new Date('Feb 8, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+                document.getElementById('countdown').innerHTML = `Next surprise in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                document.getElementById('countdown').innerHTML = 'Surprise is here!';
+            }
+        }
+        setInterval(updateCountdown, 1000);
+    
+    </script>
+</body>
+</html>

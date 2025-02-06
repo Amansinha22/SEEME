@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('pp.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Ensure full viewport height */
+    font-family: Arial, sans-serif;
+    color: rgb(62, 56, 231);
+}
+
+.container {
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+    background-color: #05000000;
+    padding: 20px;
+    /* Add a subtle box shadow for depth */
+    max-width: 600px;
+    /* Limit container width for better readability */
+    margin: auto;
+    /* Center the container horizontally */
+}
+
+.question {
+    font-size: 36px;
+    font-weight: 300px;
+    margin-bottom: 20px;
+    color: #fc4747;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    background-color: #ff5252;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #ff1744;
+    transform: scale(1.1);
+    /* Add a slight scale effect on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+        /* Reduce padding for smaller screens */
+    }
+
+    .question {
+        font-size: 28px;
+        /* Reduce font size for smaller screens */
+    }
+
+    .btn {
+        font-size: 16px;
+        /* Reduce button font size for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .question {
+        font-size: 24px;
+        /* Further reduce font size for mobile devices */
+    }
+
+    .btn {
+        font-size: 14px;
+        /* Further reduce button font size for mobile devices */
+    }
+}
